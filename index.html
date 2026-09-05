@@ -6,12 +6,9 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <meta
-      name="description"
-      content="AI.SW 부천연합해커톤 팀 프로젝트"
-    />
+    <meta name="description" content="2050 미래도시 소재 선택 시뮬레이터" />
 
-    <title>우리 팀의 무해한 AI 프로젝트</title>
+    <title>AI 2050 | 미래도시 소재 선택</title>
 
     <link rel="stylesheet" href="styles.css" />
     <script src="app.js" defer></script>
@@ -20,130 +17,58 @@
   <body>
     <header class="hero">
       <div class="container">
-        <p class="event-name">AI.SW 부천연합해커톤</p>
-
-        <h1 id="project-title">우리 팀의 프로젝트</h1>
-
-        <p class="theme">
-          AI와 미래의 공존:
-          <strong>무한한 상상, 무해한 AI</strong>
-        </p>
-
-        <p id="project-summary" class="project-summary">
-          이 문장을 우리 팀의 프로젝트 소개로 변경해 주세요.
-        </p>
+        <div class="hero-topline"><span class="signal-dot"></span> CITY SYSTEMS / 2050</div>
+        <h1>미래도시의 소재를<br /><em>선택하라</em></h1>
+        <p id="project-summary" class="project-summary">AI가 실제 과학·기술 자료를 탐색하고, 당신의 선택과 비교합니다.</p>
+        <div class="hero-meta"><span>AI MATERIAL LAB</span><span>3 SCENARIOS</span><span>MAX 90 PTS</span></div>
       </div>
     </header>
 
     <main class="container">
-      <section class="project-info" aria-labelledby="project-info-title">
-        <h2 id="project-info-title">프로젝트 한눈에 보기</h2>
-
-        <div class="card-grid">
-          <article class="info-card">
-            <span class="card-icon" aria-hidden="true">👤</span>
-            <h3>대상 사용자</h3>
-            <p id="target-user">
-              이 앱을 사용할 사람을 작성하세요.
-            </p>
-          </article>
-
-          <article class="info-card">
-            <span class="card-icon" aria-hidden="true">💡</span>
-            <h3>해결할 문제</h3>
-            <p id="problem">
-              사용자가 겪는 문제를 작성하세요.
-            </p>
-          </article>
-
-          <article class="info-card">
-            <span class="card-icon" aria-hidden="true">🤖</span>
-            <h3>AI의 역할</h3>
-            <p id="ai-role">
-              AI 또는 AI적 요소가 어떤 도움을 주는지 작성하세요.
-            </p>
-          </article>
-
-          <article class="info-card">
-            <span class="card-icon" aria-hidden="true">🛡️</span>
-            <h3>무해한 설계</h3>
-            <p id="safety-design">
-              위험, 차별, 개인정보 문제를 어떻게 예방하는지 작성하세요.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section class="demo-section" aria-labelledby="demo-title">
+      <section class="game-section" aria-labelledby="demo-title">
         <div class="section-heading">
           <div>
-            <p class="section-label">MVP DEMO</p>
-            <h2 id="demo-title">핵심 기능 시연 영역</h2>
+            <p class="section-label">MISSION <span id="mission-number">01</span> / 03</p>
+            <h2 id="demo-title">도시의 생존 조건을 선택하세요</h2>
           </div>
-
-          <span id="app-status" class="status-badge">
-            시작 준비
-          </span>
+          <div class="score-display"><span>YOUR SCORE</span><strong id="score">00</strong></div>
         </div>
-
-        <div class="demo-panel">
-          <p>
-            아래 버튼은 실행 환경을 확인하기 위한 예시입니다.
-            프로젝트를 시작하면 이 영역을 팀의 핵심 기능으로
-            교체하세요.
-          </p>
-
-          <div class="action-area">
-            <button id="start-button" type="button">
-              실행 확인
-            </button>
-
-            <button
-              id="reset-button"
-              class="secondary-button"
-              type="button"
-            >
-              초기화
-            </button>
+        <div class="progress-track"><span id="progress-bar"></span></div>
+        <div id="scenario-panel" class="scenario-panel">
+          <div class="scenario-copy">
+            <span class="scenario-index">01</span>
+            <div>
+              <h3>극한 기후를 견디는 건축</h3>
+              <p>폭염, 집중호우, 강풍이 일상이 된 2050년. 도시의 쉘터와 고층 건물을 지킬 소재를 선택해야 합니다.</p>
+              <div class="criteria"><span>내구성</span><span>내후성</span><span>유지보수</span></div>
+            </div>
           </div>
-
-          <div
-            id="result"
-            class="result-box"
-            role="status"
-            aria-live="polite"
-          >
-            버튼을 누르면 결과가 이곳에 표시됩니다.
+          <div class="material-grid">
+            <button class="material-card" type="button" disabled><span class="material-number">01</span><span class="material-tag">UHPC</span><strong>초고성능 콘크리트</strong><span class="material-fact">압축강도와 내구성이 높은 시멘트계 복합 소재</span><span class="pick-mark">○</span></button>
+            <button class="material-card" type="button" disabled><span class="material-number">02</span><span class="material-tag">CFRP</span><strong>탄소섬유 복합재</strong><span class="material-fact">가볍고 높은 인장강도를 가진 섬유 강화 소재</span><span class="pick-mark">○</span></button>
+            <button class="material-card" type="button" disabled><span class="material-number">03</span><span class="material-tag">CLT</span><strong>교차적층 목재</strong><span class="material-fact">목재를 직교 적층해 강성과 시공성을 확보한 소재</span><span class="pick-mark">○</span></button>
           </div>
+          <p class="js-required">JavaScript를 켜면 소재를 선택하고 AI 평가를 시작할 수 있습니다.</p>
+        </div>
+        <div id="result" class="result-box" role="status" aria-live="polite"><span class="result-kicker">SELECT ONE MATERIAL</span><p>객관적인 특징만 보고 가장 적합하다고 생각하는 소재를 고르세요.</p></div>
+        <div class="action-area">
+          <button id="submit-button" type="button" disabled>소재 선택하기 <span>→</span></button>
+          <button id="reset-button" class="secondary-button" type="button">처음부터 다시</button>
         </div>
       </section>
 
-      <section class="principles" aria-labelledby="principles-title">
-        <h2 id="principles-title">우리 팀의 AI 공존 원칙</h2>
-
-        <ul>
-          <li>
-            AI의 결과를 정답으로 강요하지 않고 사용자가 최종적으로
-            선택할 수 있게 합니다.
-          </li>
-          <li>
-            이름, 연락처, 비밀번호 등 개인정보를 수집하지 않습니다.
-          </li>
-          <li>
-            사람을 차별하거나 상처 주는 결과가 나오지 않도록
-            테스트합니다.
-          </li>
-          <li>
-            AI 또는 규칙 기반 판단의 한계를 사용자에게 알려 줍니다.
-          </li>
-        </ul>
+      <section class="how-section" aria-labelledby="how-title">
+        <p class="section-label">HOW IT WORKS</p>
+        <h2 id="how-title">당신의 판단과 AI의 판단을<br />나란히 비교합니다.</h2>
+        <div class="steps"><div><b>01</b><span>상황을 읽고<br />소재를 선택</span></div><div><b>02</b><span>Tavily가 과학<br />자료를 탐색</span></div><div><b>03</b><span>Gemini가 근거를<br />분석·평가</span></div></div>
+        <div class="api-status" aria-label="API 연결 안내"><span class="api-light"></span><strong>RESEARCH MODE</strong><span id="api-mode">데모 데이터로 실행 중 · API 키는 서버 환경변수에 연결</span></div>
       </section>
     </main>
 
     <footer>
       <div class="container footer-content">
-        <p>AI.SW 부천연합해커톤</p>
-        <p>무한한 상상 · 무해한 AI</p>
+        <p>AI 2050 <span>/</span> MATERIAL SELECTION SIMULATOR</p>
+        <p>AI의 답은 참고 자료입니다. 최종 판단은 당신의 몫입니다.</p>
       </div>
     </footer>
   </body>
